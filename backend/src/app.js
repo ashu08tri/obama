@@ -7,7 +7,7 @@ dotenv.config();
 const contactRoute = require("./routes/contact.route");
 const scheduleRoute = require("./routes/schedule.route");
 const volunteerRoute = require("./routes/volunteer.route");
-app.use(cors());
+app.use(cors({ origin: "https://obama-clone.netlify.app", credentials: true }));
 app.use(express.json());
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
