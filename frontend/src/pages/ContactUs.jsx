@@ -162,8 +162,8 @@ const ContactUs = () => {
                   }`}
               >
                 <option value="">- Select -</option>
-                <option value="President Obama">Shekhar Dixit</option>
-                <option value="Michelle Obama">Junior Dixit</option>
+                <option value="Shekhar Dixit">Shekhar Dixit</option>
+                <option value="Junior Dixit">Junior Dixit</option>
                 <option value="Both">Both</option>
               </select>
               {errors.recipient && <p className="mt-1 text-sm text-red-600">{errors.recipient}</p>}
