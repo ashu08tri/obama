@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
@@ -40,13 +40,13 @@ const Navbar = () => {
       {menuOpen && (
         <div className="md:hidden px-5 pb-4">
           <ul className="bg-slate-700 rounded-lg divide-y divide-slate-600 shadow">
-            <li><Link to="/" className="block px-4 py-2 hover:bg-slate-600">Home</Link></li>
-            <li><Link to="/about" className="block px-4 py-2 hover:bg-slate-600">About</Link></li>
-            <li><Link to="/progress" className="block px-4 py-2 hover:bg-slate-600">Progress</Link></li>
-            <li><Link to="/gallery" className="block px-4 py-2 hover:bg-slate-600">Gallery</Link></li>
-            <li><Link to="/invoced" className="block px-4 py-2 hover:bg-slate-600">Get Involved</Link></li>
-            <li><Link to="/schedule" className="block px-4 py-2 hover:bg-slate-600">Schedule</Link></li>
-            <li><Link to="/contactus" className="block px-4 py-2 hover:bg-slate-600">Contact Us</Link></li>
+            <li><Link onClick={toggleDropdown} to="/" className="block px-4 py-2 hover:bg-slate-600">Home</Link></li>
+            <li><Link onClick={toggleDropdown} to="/about" className="block px-4 py-2 hover:bg-slate-600">About</Link></li>
+            <li><Link onClick={toggleDropdown} to="/progress" className="block px-4 py-2 hover:bg-slate-600">Progress</Link></li>
+            <li><Link onClick={toggleDropdown} to="/gallery" className="block px-4 py-2 hover:bg-slate-600">Gallery</Link></li>
+            <li><Link onClick={toggleDropdown} to="/invoced" className="block px-4 py-2 hover:bg-slate-600">Get Involved</Link></li>
+            <li><Link onClick={toggleDropdown} to="/schedule" className="block px-4 py-2 hover:bg-slate-600">Schedule</Link></li>
+            <li><Link onClick={toggleDropdown} to="/contactus" className="block px-4 py-2 hover:bg-slate-600">Contact Us</Link></li>
           </ul>
         </div>
       )}
