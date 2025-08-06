@@ -79,7 +79,7 @@ function RKMSignup() {
                    <div className='flex justify-center'>
                      <img src={rkm} alt="rkm" className='w-62 h-24 object-contain'/>
                    </div>
-                    <h1 className="text-3xl font-bold mb-4 text-white text-center">RKM Volunteer Application Form</h1>
+                    <h1 className="text-3xl font-bold mb-4 text-white text-center">Rashtriya Kisan Manch <br /> Volunteer Application Form</h1>
                     <p className="text-white pb-10 text-center">
                         Thank you for your interest in volunteering with us!
                         Please fill out this form to join our mission and make a positive impact in the community.
