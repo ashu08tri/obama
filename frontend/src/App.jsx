@@ -10,6 +10,8 @@ import InvocedPage from './pages/InvocedPage';
 import VolunteerSignup from './components/VolunteerSignup';
 import Progress from './pages/Progress';
 import Gallery from './pages/Gallery';
+import RKMSignup from './components/RKMSignup';
+import PersonalSignup from './components/PersonalSignup';
 
 const App = () => {
   return (
@@ -19,9 +21,11 @@ const App = () => {
       <Route path="/about" element={<About />} />
       <Route path="/contactus" element={<ContactUs />} />
       <Route path="/schedule" element={<SchedulingForm />} />
-      <Route path="/invoced" element={<InvocedPage />} />
+      <Route path="/volunteer" element={<InvocedPage />} />
       <Route path="/volunteersignup" element={<VolunteerSignup />} />
-      <Route path="/progress" element={<Progress />} />
+      <Route path="/rkmsignup" element={<RKMSignup />} />
+      <Route path="/personalsignup" element={<PersonalSignup />} />
+      <Route path="/updates" element={<Progress />} />
       <Route path="/gallery" element={<Gallery />} />
 
       {/* Fallback */}

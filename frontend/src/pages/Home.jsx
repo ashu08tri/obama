@@ -43,12 +43,12 @@ const Home = () => {
 
         {/* Welcome Section */}
           <div
-            className="h-screen bg-no-repeat bg-[center_top] bg-cover"
+            className="h-[86vh] bg-no-repeat bg-[center_top] bg-cover"
             style={{
               backgroundImage: `url(${heroImage})`,
             }}
           >
-          <motion.div
+          {/* <motion.div
             className='flex h-full justify-center items-center'
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -79,7 +79,7 @@ const Home = () => {
                 </motion.button>
                 </Link>
             </div>
-          </motion.div>
+          </motion.div> */}
         </div>
 
         {/* Carousel Section */}
@@ -90,7 +90,7 @@ const Home = () => {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <h1 className='text-center text-3xl text-white py-5 font-bold'>Our Campaigns</h1>
+          <h1 className='text-center text-3xl text-white py-5 font-bold'>Campaigns</h1>
           <Carousel />
         </motion.div>
 
@@ -109,7 +109,7 @@ const Home = () => {
             transition={{ duration: 1, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h1 className='font-bold text-3xl py-2 text-center'>Our Story</h1>
+            <h1 className='font-bold text-3xl py-2 text-center'>My Story</h1>
             <p>
               Shekhar Dixit is a nationally recognized social and political leader, dedicated to farmers’ rights, rural justice, and constitutional values. 
               Born in 1984 in Lucknow, his activism began early and was shaped by his meeting with former Prime Minister V.P. Singh in 2003—a turning point that led him into grassroots movements and policy advocacy.

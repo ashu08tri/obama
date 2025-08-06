@@ -1,29 +1,47 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleDropdown = () => setMenuOpen(!menuOpen);
 
+  const stagger = {
+    initial: { opacity: 0, x: -20 },
+    animate: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.2
+      }
+    }
+  };
+
   return (
     <nav className="z-10 sticky top-0 bg-black text-white font-serif shadow-xl">
-      <div className="flex justify-between items-center px-5 py-4">
+      <div className="flex md:block  justify-between item-center px-5 py-4 md:text-center">
         {/* Logo */}
         <Link to="/" className="text-2xl font-semibold hover:text-blue-200 transition">
           SHEKHAR DIXIT
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex gap-6 text-sm">
-          <Link to="/" className="hover:text-blue-200 transition">Home</Link>
-          <Link to="/about" className="hover:text-blue-200 transition">About</Link>
-          <Link to="/progress" className="hover:text-blue-200 transition">Progress</Link>
-          <Link to="/gallery" className="hover:text-blue-200 transition">Gallery</Link>
-          <Link to="/invoced" className="hover:text-blue-200 transition">Get Involved</Link>
-          <Link to="/schedule" className="hover:text-blue-200 transition">Schedule</Link>
-          <Link to="/contactus" className="hover:text-blue-200 transition">Contact Us</Link>
-        </div>
+        <motion.div
+          variants={stagger}
+          initial="initial"
+          animate="animate"
+          className="hidden md:flex gap-6 text-sm text-center justify-center pt-2"
+        >
+          <motion.div variants={stagger}><Link to="/" className="hover:text-blue-200 transition text-center">Home</Link></motion.div>
+          <motion.div variants={stagger}><Link to="/about" className="hover:text-blue-200 transition">About</Link></motion.div>
+          <motion.div variants={stagger}><Link to="/updates" className="hover:text-blue-200 transition text-yellow-400">Updates</Link></motion.div>
+          <motion.div variants={stagger}><Link to="/gallery" className="hover:text-blue-200 transition">Gallery</Link></motion.div>
+          <motion.div variants={stagger}><Link to="/volunteer" className="hover:text-blue-200 transition">Volunteer</Link></motion.div>
+          <motion.div variants={stagger}><Link to="/schedule" className="hover:text-blue-200 transition">Schedule</Link></motion.div>
+          <motion.div variants={stagger}><Link to="/contactus" className="hover:text-blue-200 transition">Contact Us</Link></motion.div>
+        </motion.div>
 
         {/* Mobile Dropdown Toggle */}
         <div className="md:hidden">

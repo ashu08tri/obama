@@ -23,7 +23,7 @@ const Progress = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl font-bold text-blue-400 mb-4">Our Progress</h2>
+          <h2 className="text-4xl font-bold text-blue-400 mb-4">Current Updates</h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             From the grassroots to the nation, we’re building a legacy of justice, leadership, and meaningful change through Rashtriya Kisan Manch.
           </p>

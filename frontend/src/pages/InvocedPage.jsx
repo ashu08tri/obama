@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import{ useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
@@ -59,17 +59,29 @@ const InvocedPage = () => {
             transition={{ delay: 0.4, duration: 0.5 }}
           >
             <Link
+              to="/rkmsignup"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg"
+            >
+              Rashtriya Kisan Manch Volunteer
+            </Link>
+            <Link
               to="/volunteersignup"
               className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg"
             >
               Sign Up to Volunteer
             </Link>
             <Link
+              to="/personalsignup"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg"
+            >
+              Kisan Satta Volunteer
+            </Link>
+            {/* <Link
               to="/about"
               className="bg-white text-blue-600 hover:bg-blue-50 font-bold py-3 px-8 rounded-full transition duration-300 border-2 border-blue-600 shadow-lg"
             >
               Learn More
-            </Link>
+            </Link> */}
           </motion.div>
 
           <motion.div
