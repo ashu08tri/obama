@@ -1,8 +1,10 @@
-import{ useEffect } from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
 import volunteer from '../assets/volunteer.jpg';
+import rkm from '../assets/rkm.webp';
+import ks from '../assets/ks.jpg';
 
 const InvocedPage = () => {
   useEffect(() => {
@@ -47,9 +49,9 @@ const InvocedPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-           At Rashtriya Kisan Manch, volunteers are the backbone of our mission for rural justice and farmer empowerment. By offering your time, energy, and skills, you can play a vital role in driving real change across India’s villages and farming communities.
-           Whether you're passionate about supporting farmers’ rights, spreading awareness in rural areas, organizing campaigns, or helping with education and health initiatives—there’s a place for you in our movement. Join Shekhar Dixit and our growing network of committed citizens working for a more just and inclusive India.
-           Let’s stand together for change—on the ground, and from the heart.
+            At Rashtriya Kisan Manch, volunteers are the backbone of our mission for rural justice and farmer empowerment. By offering your time, energy, and skills, you can play a vital role in driving real change across India’s villages and farming communities.
+            Whether you're passionate about supporting farmers’ rights, spreading awareness in rural areas, organizing campaigns, or helping with education and health initiatives—there’s a place for you in our movement. Join Shekhar Dixit and our growing network of committed citizens working for a more just and inclusive India.
+            Let’s stand together for change—on the ground, and from the heart.
           </motion.p>
 
           <motion.div
@@ -60,22 +62,23 @@ const InvocedPage = () => {
           >
             <Link
               to="/rkmsignup"
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg"
+              className="text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg"
             >
-              Rashtriya Kisan Manch Volunteer
-            </Link>
-            <Link
-              to="/volunteersignup"
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg"
-            >
-              Sign Up to Volunteer
+              <img src={rkm} alt="" className='h-24 w-56 object-contain' />
             </Link>
             <Link
               to="/personalsignup"
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg"
+              className="text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg"
             >
-              Kisan Satta Volunteer
+              <img src={ks} alt="ks" className='h-24 w-44 object-contain' />
             </Link>
+            <Link
+              to="/volunteersignup"
+              className="text-white font-bold flex items-center py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg"
+            >
+              Sign Up to Volunteer
+            </Link>
+
             {/* <Link
               to="/about"
               className="bg-white text-blue-600 hover:bg-blue-50 font-bold py-3 px-8 rounded-full transition duration-300 border-2 border-blue-600 shadow-lg"
